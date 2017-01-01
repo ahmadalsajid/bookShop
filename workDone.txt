@@ -1,0 +1,12 @@
+1) Reader
+    -register
+    -sign in
+    -edit profile
+
+2) Publisher
+    -register
+    -sign in
+    -edit profile
+    -add book + details
+
+

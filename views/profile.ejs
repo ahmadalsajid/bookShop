@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%include partials/head.ejs%>
+    <title>Book Shop</title>
+</head>
+<body>
+<% if (user.roll==='Reader') { %>
+<% include partials/reader/profile.ejs %>
+<% } else { %>
+<% include partials/publisher/profile.ejs %>
+<% } %>
+
+</body>
+</html>

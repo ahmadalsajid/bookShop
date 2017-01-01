@@ -1,0 +1,79 @@
+<% include navbar.ejs %>
+
+
+<div class="container" style="padding-top: 60px;">
+    <h1 class="page-header">Edit Profile</h1>
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="text-center">
+                <img src="<%= user.imagePath %>" class="img-responsive" alt="image of <%= user.name%>">
+            </div>
+        </div>
+        <!-- edit form column -->
+        <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+
+            <h3>Publisher info</h3>
+            <form class="form-horizontal" id="changeInfo-form" action="/profile" method="post" role="form"  enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Name:</label>
+                    <div class="col-lg-8">
+                        <input name="name" class="form-control" value="<%= user.name%>" type="text">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Email:</label>
+                    <div class="col-lg-8">
+                        <input id="Email" name="email" class="form-control" value="<%= user.email%>" type="text" readonly="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Address:</label>
+                    <div class="col-lg-8">
+                        <input name="address" id="address" class="form-control" value="<%= user.address %>" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Contact:</label>
+                    <div class="col-lg-8">
+                        <input name="contact"  id="mobile" class="form-control" value="<%= user.contact %>" type="text">
+                        <span>put all your contact information here</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">New Picture:</label>
+                    <div class="col-md-8">
+                        <input name="profilePicture" id="profilePicture" class="form-control" type="file">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-8">
+                        <input id="saveButton" class="btn btn-primary" value="Save Changes" type="submit">
+                        <span></span>
+                        <input class="btn btn-default" value="Cancel" type="reset">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#Email").click(function(){
+            alert('You can not change email');
+        });
+    });
+</script>
+
+
+
+<% include ../scripts.ejs %>

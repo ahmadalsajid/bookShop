@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%include partials/head.ejs%>
+        <title>Book Shop</title>
+    </head>
+
+
+    <body style="padding-top: 50px">
+        <% include partials/publisher/navbar.ejs %>
+        <form class="form-horizontal" action="/bookupload" enctype="multipart/form-data" method="post">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Upload Book</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="title">Title* :</label>
+                    <div class="col-md-4">
+                        <input id="title" name="title" type="text" placeholder="Book Title" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="isbn">ISBN* :</label>
+                    <div class="col-md-4">
+                        <input id="isbn" name="isbn" type="text" placeholder="ISBN" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="genre_tags">Tags :</label>
+                    <div class="col-md-4">
+                        <input id="genre_tags" name="genre_tags" type="text" placeholder="tag1, tag2, tag2 ......." class="form-control input-md">
+                        <span class="help-block">please use comma separated tags</span>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="price">Unit Price* :</label>
+                    <div class="col-md-4">
+                        <input id="price" name="price" type="number" step="any" placeholder="12.34" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="publishDate">Publish Date :</label>
+                    <div class="col-md-4">
+                        <input id="publishDate" name="publishDate" type="date" placeholder="" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="author">Author* :</label>
+                    <div class="col-md-4">
+                        <input id="author" name="author" type="text" placeholder="Author" class="form-control input-md" required >
+
+                    </div>
+                </div>
+
+                <!-- File Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="coverImage">Book Cover* :</label>
+                    <div class="col-md-4">
+                        <input id="coverImage" name="coverImage" class="input-file" type="file" required>
+                        <span class="help-block">please upload .jpeg, .jpg or .png files only</span>
+                    </div>
+                </div>
+
+                <!-- File Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="sampleBookPath">Sample Book* :</label>
+                    <div class="col-md-4">
+                        <input id="sampleBookPath" name="sampleBookPath" class="input-file" type="file" required>
+                        <span class="help-block">please upload .docx file only</span>
+                    </div>
+                </div>
+
+
+                <!-- File Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="bookpath">Full Book* :</label>
+                    <div class="col-md-4">
+                        <input id="bookpath" name="bookpath" class="input-file" type="file" required>
+                        <span class="help-block">please upload .docx file only</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" ></label>
+                    <div class="col-md-4">
+                        <span class="help-block">* field are mandatory to be filled</span>
+                    </div>
+                </div>
+
+                <!-- Button (Double) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="button1id"></label>
+                    <div class="col-md-8">
+                        <button type="submit" id="button1id" name="button1id" class="btn btn-success">Upload</button>
+                        <button type="reset" id="button2id" name="button2id" class="btn btn-danger">Clear</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </body>
+</html>

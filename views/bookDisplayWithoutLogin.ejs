@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%include partials/head.ejs%>
+    <title>Book Shop</title>
+    <style type="text/css">
+        tab1 {padding-left: 4em;}
+    </style>
+
+</head>
+<body>
+<%include partials/loginNav.ejs%>
+
+
+<div class="container" style="padding-top: 60px;">
+    <h1 class="page-header">Book Details</h1>
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="text-center">
+                <img src="<%= singleBook.coverImage %>" class="img-responsive" alt="<%= singleBook.title %>">
+            </div>
+        </div>
+        <!-- edit form column -->
+        <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+            <h3>Book info</h3>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <label>Title : <%= singleBook.title %></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <label>ISBN : <%= singleBook.ISBN %></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <label>Author : <%= singleBook.author %></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10">
+                        <label>Tags : <%= singleBook.genre_tags %></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <label>Price : <%= singleBook.unitPrice %></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <input class="btn btn-default" value="Add to favourite" type="button">
+                        <span></span>
+                        <input class="btn btn-default" value="Read" type="button">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<%include partials/scripts.ejs%>
+</body>
+</html>
